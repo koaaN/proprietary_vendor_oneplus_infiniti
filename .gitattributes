@@ -1,3 +1,4 @@
 radio/*.img filter=lfs diff=lfs merge=lfs -text
 *.bix filter=lfs diff=lfs merge=lfs -text
 *.so filter=lfs diff=lfs merge=lfs -text
+proprietary/odm/etc/camera/anc/fusion_model_post filter=lfs diff=lfs merge=lfs -text
