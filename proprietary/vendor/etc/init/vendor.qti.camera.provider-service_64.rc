@@ -6,7 +6,6 @@ service vendor.camera-provider /vendor/bin/hw/vendor.qti.camera.provider-service
     interface aidl android.hardware.camera.provider.ICameraProvider/vendor_qti/0
     interface aidl vendor.qti.hardware.camera.offlinecamera.IOfflineCameraService/default
     interface aidl vendor.qti.hardware.camera.aon.IAONService/default
-    interface aidl vendor.oplus.hardware.camera_rfi.ICameraRfiService/default
     class hal
     user cameraserver
     group audio camera input drmrpc oem_2907 oem_2912 wakelock
@@ -20,3 +19,8 @@ service vendor.camera-provider /vendor/bin/hw/vendor.qti.camera.provider-service
 
 on boot
     chown cameraserver camera /sys/module/camera/parameters/cam_event_inject
+
+on property:sys.boot_completed=1
+    setprop vendor.oplus.camera.cam0.count 0
+    setprop vendor.oplus.camera.cam3.count 0
+    setprop vendor.oplus.camera.error.camlist 0

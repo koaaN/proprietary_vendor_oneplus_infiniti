@@ -130,4 +130,4 @@
 <ImageInfo>4:3,1408,1056,4:3,1440,1080,4:3,1280,962,4:3,1280,960,1:1,1024,1024,1:1,1080,1080,full,1280,580,full,1280,582,full,2376,1080,16:9,1280,720,16:9,1280,722,16:9,1920,1080</ImageInfo>
 <SensorInfo>6560,4928,3.23,0.8</SensorInfo>
 </Front90CameraVar>
-<CacheDirVar>/odm/etc/camera/</CacheDirVar>
+<CacheDirVar>/mnt/occe/cache/fdclite_cache/</CacheDirVar>

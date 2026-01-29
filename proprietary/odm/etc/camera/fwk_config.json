@@ -59,6 +59,7 @@
         "feature_syscamera_override_dataspace_enable": true,
         "feature_camerasdk_override_dataspace_enable": true,
         "feature_lazy_finish_fonfiguration_enable": true,
+        "feature_disconnect_ux_enable":true,
         "limit_3rd_app_size": [
             "com.mt.mtxx.mtxx.sub.preview",
             "com.benqu.wuta.sub.preview",
@@ -84,7 +85,9 @@
         ],
         "forbit_3rd_app_reconfigure": [
             "com.tencent.wework",
-            "com.tencent.mobileqq"
+            "com.tencent.mobileqq",
+            "us.zoom.videomeetings",
+            "com.google.android.apps.tachyon"
         ],
         "skip_front_preview_limit_list": [
             "com.oplus.camera",
@@ -237,6 +240,8 @@
     "com.tencent.mm": {
         "app_enable_rio": true,
         "supportExplorerCameraMask": 3,
+        "scan_zoom_value": 1.26,
+        "scan_activity_name": "com.tencent.mm.plugin.scanner.ui.BaseScanUI",
         "app_disable_fb_evict": true,
         "app_disable_fb_activity": [
             "com.tencent.mm.plugin.recordvideo.activity.MMRecordUI"
@@ -273,6 +278,27 @@
     "com.marykay.vmo.my": {
         "previewSizeForAPI1Width": 1920,
         "previewSizeForAPI1Height": 1080
+    },
+    "com.shuru.nearme": {
+        "previewSizeForAPI1Width": 1920,
+        "previewSizeForAPI1Height": 1080
+    },
+    "com.pinterest": {
+        "previewSizeForAPI1Width": 2160,
+        "previewSizeForAPI1Height": 1080
+    },
+    "com.playfake.instafake.funsta": {
+        "previewSizeForAPI1Width": 1920,
+        "previewSizeForAPI1Height": 1080,
+        "resolutionFilterForNotAddSizeAPI1": [
+            "1600x1200",
+            "1440x1080",
+            "1280x960",
+            "1024x768",
+            "720x540",
+            "640x480",
+            "320x240"
+        ]
     },
     "net.one97.paytm": {
         "previewSizeForAPI1Width": 1920,
@@ -399,15 +425,14 @@
     },
     "com.whatsapp": {
         "app_enable_rio": true,
-        "app_disable_fb_activity": [
-        "com.whatsapp.camera.CameraActivity",
-        "com.whatsapp.HomeActivity",
-        "com.whatsapp.qrcode.contactqr.ContactQrActivity",
-        "com.whatsapp.statuscomposer.ConsolidatedStatusComposerActivity",
-        "com.whatsapp.status.composer.ConsolidatedStatusComposerActivity"
-        ],
         "app_enable_fb_activity": [
-            ""
+            "com.whatsapp.voipcalling.VoipActivityV2"
+        ],
+        "app_disable_fb_activity": [
+            "com.whatsapp.camera.CameraActivity",
+            "com.whatsapp.qrcode.contactqr.ContactQrActivity",
+            "com.whatsapp.statuscomposer.ConsolidatedStatusComposerActivity",
+            "com.whatsapp.status.composer.ConsolidatedStatusComposerActivity"
         ]
     },
     "com.tencent.wework": {
@@ -442,6 +467,44 @@
         "resolutionFilterForNotAddSizeAPI2": [
             "1600x800",
             "2160x1080"
+        ],
+        "resolutionFilterForNotAddSizeAPI1": [
+            "4096x3072",
+            "4000x3000",
+            "3840x2880",
+            "3264x2448",
+            "3280x2464",
+            "3072x2304",
+            "1920x1440",
+            "1600x1200",
+            "1600x800",
+            "1440x1080",
+            "1584x1440",
+            "1920x864",
+            "1584x720",
+            "1280x960",
+            "1188x540",
+            "640x360",
+            "1024x768",
+            "864x480",
+            "800x400",
+            "792x360",
+            "720x540",
+            "720x480",
+            "640x480",
+            "640x360",
+            "640x290",
+            "480x480",
+            "352x288",
+            "320x240",
+            "176x144"
+        ]
+    },
+    "com.xhey.xcamera": {
+        "resolutionFilterForNotAddSizeAPI2": [
+            "2560x1920",
+            "2780x1264",
+            "3168x1440"
         ]
     },
     "com.mt.mtxx.mtxx": {
@@ -519,10 +582,5 @@
         ],
         "limit_exposure_time_parameter":true,
         "limit_physical_multi_resolution_size":true
-    },
-    "com.android.chrome": {
-        "isEnableRemap": true,
-        "remapCameraId": "2",
-        "needRemapCameraId": "4"
     }
 }

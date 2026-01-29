@@ -1,7 +1,7 @@
 {
     "module": "previewSeg",
     "comment":
-    [
+    [   
         "BrandID 1 for oupo, 2 for yijia, 3 for zhenwo",
         "QCOM performanceMode(BALANCED , HIGH_PERFORMANCE , POWER_SAVER , SYSTEM_SETTINGS , SUSTAINED_HIGH_PERFORMANCE ,",
         "BURST , LOW_POWER_SAVER , HIGH_POWER_SAVER , LOW_BALANCED)",
@@ -18,14 +18,14 @@
         "OdnnPriority: NORMAL, HIGH, LOW",
         "OdnnProfilingLevel: OFF, BASIC, DETAILED"
     ],
-	"product": "8750",
+	"product": "8850",
     "VENDOR": "ODNN_QNN",
-    "ODNN_VERSION": "1.0.7.0337",
-    "QNN_VERSION": "220124",
+    "ODNN_VERSION": "1.1.1.0523",
+    "QNN_VERSION": "236002",
     "param":
     [
 		{
-            "product_name": "8750",
+            "product_name": "8850",
             "BrandID": 1,
             "SegMode": "DSP",
             "Resolution":224,

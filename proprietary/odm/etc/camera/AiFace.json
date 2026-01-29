@@ -57,7 +57,7 @@
             "deblemish_x2": true,
             "shadow_x2": true,
             "facewarp_size_ratio": 1,
-            "unifySkinEnable": true,
+			"unifySkinEnable": true,
             "unifyRatio": 1.0,
             "unifyNetScale": 1.0,
             "amplifyDiff": false,
@@ -66,9 +66,53 @@
             "skinCorrectionFlag": true,
             "skinPreferFlag": false,
             "eyetuneFlag": true,
+            "eyetuneParam":
+            {
+                "eyeBrightLevel": 0.4,
+                "pupilLevel": 0.5,
+                "eyeSharpLevel": 0.0
+            },
             "Acceleration": "NEON",
             "HighpassKernelSize": 0,
-            "HighpassThreshold": 0
+            "HighpassThreshold": 0,
+            "classicAdjustMaskParams":
+            {
+                "deblemish":
+                {
+                    "branch1": 90,
+                    "branch2": 10
+                },
+                "shadow":
+                {
+                    "branch1_pouch": 100,
+                    "branch1_folds": 100,
+                    "branch1_chin": 80,
+                    "branch1_face": 100,
+                    "branch1_forehead": 100,
+                    "branch2_nose": 100,
+                    "branch2_face": 100,
+                    "branch2_forehead": 100
+                }
+            },
+            "originalAdjustMaskParams":
+            {
+                "deblemish":
+                {
+                    "branch1": 60,
+                    "branch2": 40
+                },
+                "shadow":
+                {
+                    "branch1_pouch": 60,
+                    "branch1_folds": 80,
+                    "branch1_chin": 60,
+                    "branch1_face": 100,
+                    "branch1_forehead": 100,
+                    "branch2_nose": 100,
+                    "branch2_face": 100,
+                    "branch2_forehead": 100
+                }
+            }
         }
     ],
     "EyeProduct": "2303",
@@ -84,13 +128,29 @@
             "decrption": true,
             "runAiModel": true,
             "useHistMatch": false,
+            "unifySkinOnly": false,
             "Country": "China",
             "Stratery": "RECTS_ONEBYONE",
             "SourceOfFace": "RECT",
             "pointsNum": 0,
             "netWidth": 192,
             "netHeight": 112,
+            "unifyStrengthInverse": 10,
             "Acceleration": "NEON"
+        }
+    ],
+    "WechatParamGroup":
+    [
+        {
+            "Platform": "COMMON",
+            "AiSdk": "ODNN",
+            "AdjustParams":
+            {
+                "value_x1": 35,
+                "value_x2": 90,
+                "value_y1": 20,
+                "value_y2": 90
+            }
         }
     ]
 }

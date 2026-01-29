@@ -1,7 +1,7 @@
 {
   "config": {
     "hw_platform": ["MTP", "Surf", "RCM", "QRD"],
-    "soc_id": ["618"]
+    "soc_id": ["639", "660", "661"]
   },
   "qsh_camera_ov32c4c_4":{
     "owner": "qsh_camera_ov32c4c_4",
@@ -16,8 +16,12 @@
           "comments": "Communication mode of primary bus as per COM port api. Supports : 0 - i2c; 1 - spi; 3 - i3c_sdr; 4 - i3c_hdr_ddr; 5 - i3c_i2c_legacy"
         },
         "bus_instance":{ "type": "int", "ver": "0",
-          "data": "10",
+          "data": "2",
           "comments": "Custom bus instance to be used for primary communication with sensor"
+        },
+        "qup_instance":{ "type": "int", "ver": "0",
+          "data": "2",
+          "comments": "SSC QUP instance to be used for primary communication with sensor"
         },
         "slave_config":{ "type": "int", "ver": "0",
           "data": "42",
@@ -48,8 +52,12 @@
           "comments": "Communication mode of secondary bus as per COM port api. Supports : 0 - i2c; 1 - spi; 3 - i3c_sdr; 4 - i3c_hdr_ddr; 5 - i3c_i2c_legacy"
         },
         "bus_instance":{ "type": "int", "ver": "0",
-          "data": "10",
-          "comments": "Custom bus instance to be used for secondary communication with sensor"
+          "data": "2",
+          "comments": "Custom bus instance to be used for primary communication with sensor"
+        },
+        "qup_instance":{ "type": "int", "ver": "0",
+          "data": "2",
+          "comments": "SSC QUP instance to be used for primary communication with sensor"
         },
         "slave_config":{ "type": "int", "ver": "0",
           "data": "0",
@@ -80,8 +88,12 @@
         "comments": "As per vana subsection in camx xml",
         "owner": "qsh_camera_ov32c4c_4",
         "resource_str": {"type": "str", "ver": "0",
-          "data": "/pmic/client/aoc_avdd",
-          "comments": "Path for setting the source of power to the sensor power rail by PMIC driver; as defined in PAM table"
+          "data": "L6N_E1",
+          "comments": "LDO string identifier, e.g. '/pmic/client/aoc_avdd' if using legacy PAM style, or 'L6N_E1' if using new direct device voting style"
+        },
+        "voltage": {"type": "int", "ver": "0",
+          "data": "2800",
+          "comments": "Voltage for the power rail in mV (applicable only for new direct device voting style)"
         },
         "ldo_pin_value_to_pwr_on": {"type": "int", "ver": "0",
           "data": "1",
@@ -113,11 +125,15 @@
         }
       },
       ".custom_reg1": {
-        "comments": "As per custom_reg1 subsection in camx xml",
+        "comments": "As per custom_reg1 subsection in camx xml (for VANA2)",
         "owner": "qsh_camera_ov32c4c_4",
         "resource_str": {"type": "str", "ver": "0",
           "data": "na",
-          "comments": "Path for setting the source of power to the sensor power rail by PMIC driver; as defined in PAM table"
+          "comments": "LDO string identifier, e.g. '/pmic/client/aoc_avdd' if using legacy PAM style, or 'ldom1' if using new direct device voting style"
+        },
+        "voltage": {"type": "int", "ver": "0",
+          "data": "0",
+          "comments": "Voltage for the power rail in mV (applicable only for new direct device voting style)"
         },
         "ldo_pin_value_to_pwr_on": {"type": "int", "ver": "0",
           "data": "1",
@@ -152,8 +168,12 @@
         "comments": "As per vio subsection in camx xml",
         "owner": "qsh_camera_ov32c4c_4",
         "resource_str": {"type": "str", "ver": "0",
-          "data": "/pmic/client/aoc_dovdd",
-          "comments": "Path for setting the source of power to the sensor power rail by PMIC driver; as defined in PAM table"
+          "data": "L2N_E1",
+          "comments": "LDO string identifier, e.g. '/pmic/client/aoc_avdd' if using legacy PAM style, or 'L2N_E1' if using new direct device voting style"
+        },
+        "voltage": {"type": "int", "ver": "0",
+          "data": "1200",
+          "comments": "Voltage for the power rail in mV (applicable only for new direct device voting style)"
         },
         "ldo_pin_value_to_pwr_on": {"type": "int", "ver": "0",
           "data": "1",
@@ -188,8 +208,12 @@
         "comments": "As per vdig subsection in camx xml",
         "owner": "qsh_camera_ov32c4c_4",
         "resource_str": {"type": "str", "ver": "0",
-          "data": "/pmic/client/aoc_dvdd",
-          "comments": "Path for setting the source of power to the sensor power rail by PMIC driver; as defined in PAM table"
+          "data": "L1N_E1",
+          "comments": "LDO string identifier, e.g. '/pmic/client/aoc_avdd' if using legacy PAM style, or 'L1N_E1' if using new direct device voting style"
+        },
+        "voltage": {"type": "int", "ver": "0",
+          "data": "1104",
+          "comments": "Voltage for the power rail in mV (applicable only for new direct device voting style)"
         },
         "ldo_pin_value_to_pwr_on": {"type": "int", "ver": "0",
           "data": "1",
@@ -355,6 +379,26 @@
       "min_als_settle_time_ms":{"type": "int", "ver": "0",
         "data": "66",
         "comments": "Minimum waiting time from enabling sensor for ALS values to settle"
+      }
+    },
+    ".sensor_dbg_params":{
+      "comments": "Params to specify sensor registers to be read during HW timeout",
+      "owner": "qsh_camera_ov32c4c_4",
+      "enable":{"type": "int", "ver": "0",
+        "data": "0",
+        "comments": "If read-back from sensor is to be enabled"
+      },
+      "use_primary_bus_info":{"type": "int", "ver": "0",
+        "data": "0",
+        "comments": "Whether to read from primary mode (ULP streaming) or secondary mode slave address (Motion detection)"
+      },
+      "check_at_hw_timeout":{"type": "int", "ver": "0",
+        "data": "0",
+        "comments": "Whether debug registers should be read & logged during HW timeout or during frame-ready"
+      },
+      "reg_str":{"type": "str", "ver": "0",
+        "data": "7466,4 7468,2 7467,1",
+        "comments": "Space-separated register base-len pairs (Max 16 allowed); base addr & length (no. of contiguous bytes) are comma-separated within pair. Max 99 bytes (len=99) allowed to be reg-read from each base. There should be NO Spaces within pair, as we tokenize based on spaces to extract pairs first."
       }
     },
     ".aux_pin_params":{

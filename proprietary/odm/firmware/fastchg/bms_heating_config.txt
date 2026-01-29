@@ -2,7 +2,7 @@
 0x7c=cpu_mask
 0=fpc_ntc_support
 0=temp_comp_with_fpc_ntc
-10=temp_comp_without_fpc_ntc
+30=temp_comp_without_fpc_ntc
 50=allow_temp_high_thr
 -250=allow_temp_low_thr
 21600=time_out

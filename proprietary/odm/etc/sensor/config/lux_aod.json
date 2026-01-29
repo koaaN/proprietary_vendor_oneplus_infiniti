@@ -1,7 +1,7 @@
 {
-  "config": {
-    "hw_platform": ["MTP", "Surf", "RCM", "QRD", "HDK"],
-    "soc_id": ["618"]
+  "config":{
+    "hw_platform": ["MTP", "RCM", "Surf", "HDK", "QRD"],
+    "soc_id": ["660", "661"]
   },
   "lux_aod": {
     "owner": "lux_aod",
@@ -10,6 +10,9 @@
     },
     "thrd-high": {"type": "int","ver": "0",
       "data": "50"
+    },
+    "deploy-multi-aod": {"type": "int","ver": "0",
+      "data": "1"
     }
   }
 }

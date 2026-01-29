@@ -1,7 +1,7 @@
 {
   "config": {
     "hw_platform": ["MTP", "Surf", "RCM", "QRD"],
-    "soc_id": ["618"]
+    "soc_id": ["639", "660", "661"]
   },
   "qsh_camera":{
     "owner": "qsh_camera",
@@ -28,8 +28,16 @@
         "comments": "NMS params for tuning QQVGA FD",
         "owner": "qsh_camera",
         "confidence_threshold": {"type": "flt", "ver": "0",
-          "data": "-17.0",
+          "data": "-26.0",
           "comments": "FD confidence threshold (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_head": {"type": "flt", "ver": "0",
+          "data": "-16.0",
+          "comments": "FD confidence threshold for head (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_torso": {"type": "flt", "ver": "0",
+          "data": "1.0",
+          "comments": "FD confidence threshold for torso (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
         },
         "iou_threshold": {"type": "flt", "ver": "0",
           "data": "0.1",
@@ -64,8 +72,16 @@
         "comments": "NMS params for tuning QVGA FD",
         "owner": "qsh_camera",
         "confidence_threshold": {"type": "flt", "ver": "0",
-          "data": "0.0",
+          "data": "-15.0",
           "comments": "FD confidence threshold (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_head": {"type": "flt", "ver": "0",
+          "data": "-6.0",
+          "comments": "FD confidence threshold for head (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_torso": {"type": "flt", "ver": "0",
+          "data": "5.0",
+          "comments": "FD confidence threshold for torso (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
         },
         "iou_threshold": {"type": "flt", "ver": "0",
           "data": "0.1",
@@ -100,8 +116,16 @@
         "comments": "NMS params for tuning 360p FD",
         "owner": "qsh_camera",
         "confidence_threshold": {"type": "flt", "ver": "0",
-          "data": "6.0",
+          "data": "-12.0",
           "comments": "FD confidence threshold (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_head": {"type": "flt", "ver": "0",
+          "data": "0.0",
+          "comments": "FD confidence threshold for head (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_torso": {"type": "flt", "ver": "0",
+          "data": "6.0",
+          "comments": "FD confidence threshold for torso (-128 to 127); each candidate face selected if its confidence > threshold; lower threshold => higher detection chance, also increases false positives"
         },
         "iou_threshold": {"type": "flt", "ver": "0",
           "data": "0.1",
@@ -136,12 +160,16 @@
         "comments": "NMS params for tuning QR/Barcode detection performance (one model is used for both)",
         "owner": "qsh_camera",
         "confidence_threshold_qr":{"type": "int", "ver": "0",
-          "data": "1",
+          "data": "-21",
           "comments": "QR code detection pre-sigmoid threshold; detected if confidence > threshold; lower threshold => higher detection chance, also increases false positives"
         },
         "confidence_threshold_bar":{"type": "int", "ver": "0",
-          "data": "1",
+          "data": "-21",
           "comments": "Barcode detection pre-sigmoid threshold; detected if confidence > threshold; ; lower threshold => higher detection chance, also increases false positives"
+        },
+        "confidence_threshold_ttcode":{"type": "int", "ver": "0",
+          "data": "-21",
+          "comments": "Tiktok code detection pre-sigmoid threshold; detected if confidence > threshold; ; lower threshold => higher detection chance, also increases false positives"
         },
         "is_island":{"type": "int", "ver": "0",
           "data": "1",
@@ -198,7 +226,20 @@
         "is_used":{"type": "int", "ver": "0",
           "data": "1",
           "comments": "Whether or not HD model will be used. If not, FW optimizes memory usage by avoiding model registration, context creations, etc"
-        }
+          }
+      }
+    },
+
+    ".chip_info_override":{
+      "comments": "To override chip info params for internal PC test only",
+      "owner": "qsh_camera",
+      "isp_max_supported_input_width":{"type": "int", "ver": "0",
+        "data": "1920",
+        "comments": "To override maximum input frame width supported by ISP, for internal PC test only"
+      },
+      "isp_max_supported_input_height":{"type": "int", "ver": "0",
+        "data": "1080",
+        "comments": "To override maximum input frame height supported by ISP, for internal PC test only"
       }
     }
   }

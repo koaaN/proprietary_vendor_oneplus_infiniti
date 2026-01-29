@@ -130,4 +130,4 @@
 <ImageInfo>4:3,6560,4928,4:3,3280,2464,4:3,3264,2448,1:1,2464,2464,full,3280,1470,16:9,3280,1848</ImageInfo>
 <SensorInfo>6560,4928,3.23,0.8</SensorInfo>
 </Front90CameraVar>
-<CacheDirVar>/odm/etc/camera/</CacheDirVar>
+<CacheDirVar>/mnt/occe/cache/fdc_cache/</CacheDirVar>

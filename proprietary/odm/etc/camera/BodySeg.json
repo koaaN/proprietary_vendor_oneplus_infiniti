@@ -48,8 +48,8 @@
             "Country": "China",
             "NetWidth": 480,
             "NetHeight": 640,
-            "NetOutChannel": 5,
-            "NetClass": 5,
+            "NetOutChannel": 4,
+            "NetClass": 4,
             "NetInputBgr": true,
             "HeadUpRight": true
         }
