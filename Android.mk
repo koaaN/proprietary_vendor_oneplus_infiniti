@@ -1,0 +1,52 @@
+#
+# Automatically generated file. DO NOT MODIFY
+#
+
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),infiniti)
+
+$(call add-radio-file-sha1-checked,radio/abl.img,fcce3598958c93c8361892237194799222141710)
+$(call add-radio-file-sha1-checked,radio/aop_config.img,7bdc92f348b6ca7a0ffbd8c9a18f42edc20059ad)
+$(call add-radio-file-sha1-checked,radio/aop.img,4e70c01ae17b461e48300a08815f5b50ca923c00)
+$(call add-radio-file-sha1-checked,radio/bluetooth.img,d4614cf6e8844a5ff9c3d6e5fd4cf43ed23c7195)
+$(call add-radio-file-sha1-checked,radio/cpucp_dtb.img,1863fcc82dd4c2d5f7746848917677e0ba40065c)
+$(call add-radio-file-sha1-checked,radio/cpucp.img,209a41ede0d58ae4277031ca6360a68caa345f09)
+$(call add-radio-file-sha1-checked,radio/dcp.img,3bb9178b214c2e872110669aad43fa0499b9d289)
+$(call add-radio-file-sha1-checked,radio/devcfg.img,e5285b7eeb6802db72b6a75fe4533e012c9a8d96)
+$(call add-radio-file-sha1-checked,radio/dsp.img,9f9a3d91049911aee6029a961ea1762c7bd1e3d3)
+$(call add-radio-file-sha1-checked,radio/engineering_cdt.img,48ed6e6a5bfac48daf3507617353c73a82193236)
+$(call add-radio-file-sha1-checked,radio/featenabler.img,64800b768ca5bae2851accb660ed6abf9ed7cab4)
+$(call add-radio-file-sha1-checked,radio/hyp_ac_config.img,071ee65eab522307937ca3de0a6be3d9e3bc8474)
+$(call add-radio-file-sha1-checked,radio/hyp.img,472b23270449927790f01490c9a24034a43f049a)
+$(call add-radio-file-sha1-checked,radio/imagefv.img,2ec139c63c233c1fcaf76f9dc9c3528618a31907)
+$(call add-radio-file-sha1-checked,radio/keymaster.img,d22f52e4ccbec49b16a90804d8cd3bca3607c4c8)
+$(call add-radio-file-sha1-checked,radio/multiimgoem.img,8bd2b3f81e7a94a71b6a30360bd3e8ba2ad28029)
+$(call add-radio-file-sha1-checked,radio/multiimgqti.img,aeb9019cff9016e8b1b4216643b44e94615e59cc)
+$(call add-radio-file-sha1-checked,radio/oplus_sec.img,6865ad1ded4d3cec82c234bc3ad3d006ada761b9)
+$(call add-radio-file-sha1-checked,radio/pdp_cdb.img,1fe4fae51cbda0f9dfbc842919553d9997675372)
+$(call add-radio-file-sha1-checked,radio/pdp.img,0b57b11111f5923888f7f7ceb72b4214d24cc86b)
+$(call add-radio-file-sha1-checked,radio/pvmfw.img,e2bddc602202f81be3b584a969f3ad4f72a26f90)
+$(call add-radio-file-sha1-checked,radio/qupfw.img,492bd43c904118ada7665be18ca193cd008b2e89)
+$(call add-radio-file-sha1-checked,radio/secretkeeper.img,c699c8b774222af47798ba04db20890c8885674b)
+$(call add-radio-file-sha1-checked,radio/shrm.img,2e249958da027301238bab6311bc767e2d717b56)
+$(call add-radio-file-sha1-checked,radio/soccp_dcd.img,9e2f6182d79120783d8279ebe413ce9138cbc439)
+$(call add-radio-file-sha1-checked,radio/soccp_debug.img,99de88d5ea7c851e5d5ca01ea28c8a50e54d5ff6)
+$(call add-radio-file-sha1-checked,radio/soccp.img,05d84503b9fe89ea082a3b95a1470c4ffce2ffb9)
+$(call add-radio-file-sha1-checked,radio/splash.img,30d46f9fd800be7c401a3a25bd9c2817c686e78e)
+$(call add-radio-file-sha1-checked,radio/spuservice.img,f7e7676e8582b3ff249f594ab6e78b1a2dbdaf74)
+$(call add-radio-file-sha1-checked,radio/tme_config.img,b4c2eb701b643999bdedf73066833b803d686b40)
+$(call add-radio-file-sha1-checked,radio/tme_fw.img,e82c12e64f6b92d23256898e24738c776377ff06)
+$(call add-radio-file-sha1-checked,radio/tme_seq_patch.img,cf1e640e4f572a0331f8c8f63fd97bd3f76b7b98)
+$(call add-radio-file-sha1-checked,radio/tz_ac_config.img,88c70ba714e23de8ff79f1a86baa0dfcbd79d2bb)
+$(call add-radio-file-sha1-checked,radio/tz.img,8685e7f5372bac02a36d1ed2d5bdec7594c3ba45)
+$(call add-radio-file-sha1-checked,radio/tz_qti_config.img,2378bbe5c9889bef88f56652a49d25c38ac3edf8)
+$(call add-radio-file-sha1-checked,radio/uefi.img,b3b06281c72e86cb99ca6e1656061a1eb30abfac)
+$(call add-radio-file-sha1-checked,radio/uefisecapp.img,a547955d22518d1cc82771a0395ebfbbde9121ce)
+$(call add-radio-file-sha1-checked,radio/xbl_ac_config.img,5b30d97f9266ef4395ed55f4a0448bbd0174b864)
+$(call add-radio-file-sha1-checked,radio/xbl_config.img,f63702abd8eaafceb53c18d63014a3645faa032c)
+$(call add-radio-file-sha1-checked,radio/xbl.img,baf86eeb658bf5f91646b776694f696b77905af5)
+$(call add-radio-file-sha1-checked,radio/xbl_ramdump.img,f898ead4e6958191f49b3e93119ce3ea776ff4ab)
+
+
+endif
